@@ -5,9 +5,8 @@ import HeaderHome from '../components/HeaderHome'
 import { useRouter } from 'next/router'
 import { FaDatabase } from 'react-icons/fa'
 import Questionsmodel from '../components/Questionsmodel'
-import ModalSet from '../components/ModalSet'
 import { db } from '../firebase'
-// import { BallTriangle } from 'react-loader-spinner'
+import { BallTriangle } from 'react-loader-spinner'
 import { doc, getDoc } from 'firebase/firestore'
 // import Image from 'next/image'
 // import axios from 'axios'
@@ -132,7 +131,7 @@ function home() {
 
       {loading ? (
         <div className="  absolute top-[50%] left-[50%] h-fit w-fit translate-x-[-50%] translate-y-[-50%] transform  items-center justify-center">
-          {/* <BallTriangle color="#00BFFF" height={80} width={80} /> */}
+          <BallTriangle color="#00BFFF" height={80} width={80} />
         </div>
       ) : (
         <div className="m-auto my-10 flex  w-[100%] max-w-[90rem] flex-wrap items-center justify-around border-0 border-black md:my-16 ">

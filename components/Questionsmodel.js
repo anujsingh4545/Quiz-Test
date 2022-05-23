@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { FaDatabase } from 'react-icons/fa'
 import { BiArrowBack } from 'react-icons/bi'
-// import { BallTriangle } from 'react-loader-spinner'
+import { BallTriangle } from 'react-loader-spinner'
 import { doc, getDoc, updateDoc } from 'firebase/firestore'
 import { db } from '../firebase'
 
@@ -301,7 +301,7 @@ function Questionsmodel({ modal, topic, username }) {
       <div className="m-auto  h-[100%] w-[100%] max-w-7xl bg-black    bg-cover bg-no-repeat shadow-xl shadow-[#ffffffa9] ">
         {loading ? (
           <div className=" flex h-[100%]   w-[100%] max-w-7xl items-center justify-center">
-            {/* <BallTriangle color="#00BFFF" height={80} width={80} /> */}
+            <BallTriangle color="#00BFFF" height={80} width={80} />
           </div>
         ) : errors ? (
           <div className="absolute top-[50%] left-[50%]  w-[100%] max-w-7xl translate-x-[-50%] translate-y-[-50%] transform  ">

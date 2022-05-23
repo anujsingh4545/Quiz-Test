@@ -10,7 +10,7 @@ import {
   setLogLevel,
 } from 'firebase/firestore'
 import { db } from '../firebase'
-// import { BallTriangle } from 'react-loader-spinner'
+import { BallTriangle } from 'react-loader-spinner'
 import HeaderHome from '../components/HeaderHome'
 
 function leaderboard() {
@@ -107,7 +107,7 @@ function leaderboard() {
 
           {loading ? (
             <div className=" mt-28  flex h-fit w-[100%] items-center justify-center">
-              {/* <BallTriangle color="#00BFFF" height={80} width={80} /> */}
+              <BallTriangle color="#00BFFF" height={80} width={80} />
             </div>
           ) : ranks.length <= 0 ? (
             <p className="mt-20 w-[100%] text-center font-serif text-[1.5rem] font-medium italic tracking-wider text-black sm:text-[2rem] ">
