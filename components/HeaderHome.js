@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { FiLogOut } from 'react-icons/fi'
-// import axios from 'axios'
+import axios from 'axios'
 import { useRouter } from 'next/router'
 
 function HeaderHome({ modal }) {

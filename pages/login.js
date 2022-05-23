@@ -5,7 +5,7 @@ import Header from '../components/Header'
 import { useRecoilState } from 'recoil'
 import { loginCheck } from '../atoms/loginCheck'
 import { useRouter } from 'next/router'
-// import axios from 'axios'
+import axios from 'axios'
 
 function login() {
   let username = useRef(null)
@@ -49,15 +49,15 @@ function login() {
           const credentials = { user, pass }
           console.log(credentials)
 
-          // const users = await axios.post('/api/auth/login', credentials)
+          const users = await axios.post('/api/auth/login', credentials)
 
-          // alert(`Welcome ${username.current.value} 🙂`)
-          // username.current.value = ''
-          // Password.current.value = ''
+          alert(`Welcome ${username.current.value} 🙂`)
+          username.current.value = ''
+          Password.current.value = ''
 
-          // if (users.status === 200) {
-          //   router.replace('/userdata')
-          // }
+          if (users.status === 200) {
+            router.replace('/userdata')
+          }
           router.replace('/userdata')
         } else {
           alert("Password didn't match, try again ☹️ ")

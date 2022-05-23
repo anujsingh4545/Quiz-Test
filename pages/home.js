@@ -9,7 +9,7 @@ import { db } from '../firebase'
 import { BallTriangle } from 'react-loader-spinner'
 import { doc, getDoc } from 'firebase/firestore'
 // import Image from 'next/image'
-// import axios from 'axios'
+import axios from 'axios'
 
 function home() {
   const [topic, settopic] = useState('')
