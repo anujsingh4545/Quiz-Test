@@ -10,6 +10,7 @@ function HeaderHome({ modal }) {
   const logOut = async () => {
     if (confirm('Are you sure you want to log out ⚠️')) {
       const user = await axios.get('../api/auth/log')
+      console.log(user.status)
       if (user.status === 200) {
         localStorage.setItem('USERNAME', JSON.stringify(''))
         router.replace('/login')

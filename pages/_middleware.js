@@ -4,7 +4,7 @@ const secret = process.env.SECRET
 
 export default function middleware(req) {
   const { cookies } = req
-  const jwt = cookies.OursiteJWT
+  const jwt = cookies.QuizApp
   const { pathname } = req.nextUrl
 
   if (pathname.includes('/leaderboard')) {
