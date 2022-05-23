@@ -1,15 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import { useRecoilState } from 'recoil'
-import { loginCheck } from '../atoms/loginCheck'
 import HeaderHome from '../components/HeaderHome'
-import { useRouter } from 'next/router'
 import { FaDatabase } from 'react-icons/fa'
 import Questionsmodel from '../components/Questionsmodel'
 import { db } from '../firebase'
 import { BallTriangle } from 'react-loader-spinner'
 import { doc, getDoc } from 'firebase/firestore'
-// import Image from 'next/image'
-import axios from 'axios'
 
 function home() {
   const [topic, settopic] = useState('')

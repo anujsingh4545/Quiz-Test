@@ -36,8 +36,6 @@ function Questionsmodel({ modal, topic, username }) {
 
       let title
 
-      console.log(topic)
-
       if (topic === 'Computers') {
         title = '18'
       }
@@ -112,8 +110,6 @@ function Questionsmodel({ modal, topic, username }) {
     return arra1
   }
 
-  console.log(RAnswer)
-
   const submitquiz = async () => {
     if (loader) {
       return
@@ -182,7 +178,6 @@ function Questionsmodel({ modal, topic, username }) {
       const docSnap1 = await getDoc(docRef1)
       if (docSnap1.exists()) {
         AbsenterScore1 = docSnap1.data().score
-        console.log(AbsenterScore1)
       }
       await updateDoc(docRef1, {
         score: AbsenterScore1 + 4.0, //Adding +4 if user gives right answer
