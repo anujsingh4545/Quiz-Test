@@ -1,3 +1,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+  font-size: 62.5%;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+  user-select: black;
+}
+
+::selection {
+  color: yellowgreen;
+}
+
+body {
+  background-color: #ececec;
+}
+
+.nav-link::after {
+  content: '';
+  width: 0%;
+  height: 0.2rem;
+  background: #cd1818;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
