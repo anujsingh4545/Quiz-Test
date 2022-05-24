@@ -9,7 +9,7 @@ export default async function (req, res) {
   if (user && pass) {
     const token = sign(
       {
-        exp: Math.floor(Date.now() / 1000) + 60 * 60 * 24 * 30, // 30 days
+        exp: Math.floor(Date.now() / 1000) + 60 * 60 * 24 * 3, // 30 days
         username: user,
       },
       secret
@@ -18,8 +18,8 @@ export default async function (req, res) {
     const serialised = serialize('QuizApp', token, {
       httpOnly: true,
       secure: process.env.NODE_ENV !== 'development',
-      sameSite: 'strict',
-      maxAge: 60 * 60 * 24 * 30,
+      sameSite: 'Lax',
+      maxAge: 60 * 60 * 24 * 3,
       path: '/',
     })
 
