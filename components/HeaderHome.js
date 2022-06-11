@@ -53,7 +53,11 @@ function HeaderHome({ modal }) {
             <div>
               <FiLogOut
                 className="ml-3 animate-pulse cursor-pointer text-[2rem] font-bold text-[#cd1818] sm:ml-6 "
-                onClick={() => logOut()}
+                onClick={() =>
+                  alert(
+                    'Logout functionality not working currently , although user will be automatically logout after some time ! '
+                  )
+                }
               />
             </div>
           </div>

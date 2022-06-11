@@ -14,12 +14,11 @@ export default async function (req, res) {
       },
       secret
     )
-
     const serialised = serialize('QuizApp', token, {
       httpOnly: true,
       secure: process.env.NODE_ENV !== 'development',
       sameSite: 'Lax',
-      maxAge: 60 * 60 * 24 * 3,
+      maxAge: 60 * 60 * 1,
       path: '/',
     })
 

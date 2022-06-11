@@ -16,7 +16,7 @@ export default async function (req, res) {
       path: '/',
     })
 
-    await res.setHeader('Set-Cookie', serialised)
+    res.setHeader('Set-Cookie', serialised)
 
     res.status(200).json({ message: 'Successfuly logged out!' })
   }
